@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/quizzes";
+const API_URL = "https://quizo-i2pr.onrender.com/quizzes";
 
 export const getQuizzes = async () => {
   try {
