@@ -7,7 +7,7 @@
     "dev": "nodemon",
     "build": "tsc",
     "start": "node dist/server.js",
-    "postinstall": "pnpm install && pnpm dlx prisma generate"
+    "postinstall": "prisma generate && tsc"
   },
   "keywords": [],
   "author": "",
@@ -18,14 +18,13 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "prisma": "^6.3.1",
-    "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
-    "@types/dotenv": "^8.2.3",
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.4",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2"
   }
 }
