@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
 import { PrismaClient } from "@prisma/client";
 import dotenv from "dotenv";
@@ -43,7 +43,7 @@ async function initializeStaticUser() {
 }
 
 // Authentication
-app.post("/login", async (req, res) => {
+app.post("/login", async (req: Request, res: Response) => {
   const { username, password } = req.body;
   if (username === STATIC_USER.username && password === STATIC_USER.password) {
     res.json({ success: true, userId: STATIC_USER_ID });
@@ -53,7 +53,7 @@ app.post("/login", async (req, res) => {
 });
 
 // Get all quizzes
-app.get("/quizzes", async (req, res) => {
+app.get("/quizzes", async (req: Request, res: Response) => {
   try {
     const quizzes = await prisma.quiz.findMany({
       where: { userId: STATIC_USER_ID },
@@ -66,7 +66,7 @@ app.get("/quizzes", async (req, res) => {
 });
 
 // Create quiz
-app.post("/quizzes", async (req, res) => {
+app.post("/quizzes", async (req: Request, res: Response) => {
   try {
     const { title, description } = req.body;
     const quiz = await prisma.quiz.create({
@@ -83,7 +83,7 @@ app.post("/quizzes", async (req, res) => {
 });
 
 // Update quiz
-app.put("/quizzes/:id", async (req, res) => {
+app.put("/quizzes/:id", async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const { title, description } = req.body;
@@ -101,7 +101,7 @@ app.put("/quizzes/:id", async (req, res) => {
 });
 
 // Delete quiz
-app.delete("/quizzes/:id", async (req, res) => {
+app.delete("/quizzes/:id", async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     await prisma.quiz.delete({
