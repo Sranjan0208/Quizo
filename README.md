@@ -1,4 +1,4 @@
-````md
+
 # 📝 Quizo
 
 A **full-stack** quiz management application built with **React, Node.js, Express, and PostgreSQL (Prisma ORM)**.  
@@ -14,7 +14,7 @@ This project allows users to **create, edit, delete, and fetch quizzes**.
 git clone https://github.com/yourusername/Quizo.git
 cd Quizo
 ```
-````
+
 
 ### 2️⃣ **Backend Setup**
 
@@ -248,6 +248,3 @@ DELETE /quizzes/:id
 
 ---
 
-```
-
-```
