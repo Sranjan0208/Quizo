@@ -4,6 +4,9 @@
 A **full-stack** quiz management application built with **React, Node.js, Express, and PostgreSQL (Prisma ORM)**.  
 This project allows users to **create, edit, delete, and fetch quizzes**.
 
+Frontend: [[https://quizo-five.vercel.app/]]
+Backend: [[https://quizo-i2pr.onrender.com]]
+
 ---
 
 ## 🚀 **Project Setup (Run Locally)**
